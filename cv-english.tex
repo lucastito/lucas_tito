@@ -1,0 +1,215 @@
+        \documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{graphicx}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+\begin{minipage}[b]{0.65\linewidth}
+    \par{
+    		{\Huge\textsc{Lucas Tito}
+    }\smallskip\par}
+        \href{mailto:lucas.s.tito@gmail.com}{lucas.s.tito@gmail.com}\\
+        Tv. Ramos 35, Mutondo, São Gonçalo, RJ, Brasil, 24450560, \\
+        +55 21 964509210 / +55 21 37084352\\
+        
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.35\linewidth}
+\end{minipage}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & Muxi (Grupo APPI) \\
+ \textsc{Desde Agosto de 2016}&\emph{Requirements Analyst}\\
+ &\footnotesize{Activities: Manage requirements (RFs, UCs, USs and etc) by adding value to the customer; use of the scrum methodology (in some projects being product owner and in other scrum master), improvement of internal processes of the company. Participation in projects with national and international companies of the means of payment (member of the team of Sales engineering), as well as acting in the definition and evolution of the company's products.}\\
+  
+ & \\
+ 
+ \emph{Current} & Audima (Start Up) \\
+ \textsc{Desde Julho de 2017}&\emph{Consultor em Acessibilidade}\\
+ &\footnotesize{Activities: Usability testing , focus groups creation for target audience focused product analysis, backlog prioritizing and other Product Owner common tasks.}\\
+ 
+ & \\
+ 
+ \emph{Current} & Cookinutes \\
+ \textsc{Desde Agosto de 2015}&\emph{Empreendedor}\\
+ &\footnotesize{Activities: digital marketing , client relationship, production process improving and accounting. My mother deals with food production and I deal with previously mentioned tasks.}\\
+ 
+ & \\
+ 
+ \emph{Julho de 2016 a} & UFF - IN JR \\
+ \textsc{Janeiro de 2017}&\emph{Consultor de Processos Voluntário}\\
+ &\footnotesize{Activities: Applying BPM and BPMN training; emulating project management tasks such as client meetings.}\\
+ 
+ & \\
+ 
+ \emph{Fevereiro de 2015 a} & Muxi (Grupo APPI) \\
+ \textsc{Julho de 2016}&\emph{Estagiário Em Requisitos e Processos}\\
+ &\footnotesize{Activities: Requirements and use case management, quantitative and qualitative analysis of the companies implicit processes, creating action plans for improving those processes.}\\
+ 
+ & \\
+ 
+ \emph{Junho de 2014 a} & Universidade Federal Fluminense (UFF) \\
+ \textsc{Dezembro de 2014}&\emph{Monitor de Engenharia de Software I}\\
+ &\footnotesize{Activities: creating problems lists for students, supporting role during classrooms, helping in practical modeling problems in hands on classes, replacing the teacher with hands on classes when he could no attend, correcting assessments and evaluating students presentations.}\\
+ 
+  & \\
+ 
+ \emph{Abril de 2012 a} & LES/PUC-RJ \\
+ \textsc{Julho de 2012}&\emph{Estagiário Desenvolvedor Java}\\
+ &\footnotesize{Activities: Developing automatized applications and database tests for the "Bandeira" project of Petrobras.}\\
+ 
+ \multicolumn{2}{c}{} \end{tabular}
+ 
+ \section{Research Experience}
+\begin{tabular}{r|p{11cm}}
+ \emph{2015 a} & Researcher \\
+ \textsc{2016}&\emph{Técnicas de Negociação de Requisitos.}\\
+ &\footnotesize{Activities: Cataloguing all requirement negotiation techniques, their advantages, disavantages and other data that can affect software projects in terms of schedule, price, scope and quality. Paper published in 2017 at the 19th International Conference on Enterprise Information Systems (ICEIS).}\\
+ 
+ & \\
+ 
+ \emph{2015} & Research Collaborator \\
+ \textsc{}&\emph{Análise Causal com Base em Survey}\\
+ &\footnotesize{NaPiRE (www.re-survey.org), which serve as a company's investigative base. This study aims to identify flaws in requirements elicitation trough data validation obtained in surveys. Published in ICS.}\\
+ 
+ & \\
+ 
+ \emph{2011} & Projeto Enem Digital \\
+ \textsc{a 2015}&\emph{Consultor de Usabilidade}\\
+ &\footnotesize{Tool that enables people with visual impairment to attend the national high school exam (ENEM) independently, using an web interface.}\\
+ 
+ & \\
+ 
+ \emph{2014} & Projeto Prodígio \\
+ \textsc{}&\emph{Desenvolvedor}\\
+ &\footnotesize{Incentive to Brazilian public school student to learn math trough mobile games.}\\
+ 
+ & \\
+ 
+ \emph{2013} & Universidade Federal Fluminense (UFF) \\
+ \textsc{}&\emph{Bolsista de Iniciação Científica (PIBIC)}\\
+ &\footnotesize{Research into software oriented networks intrusion detection systems.}\\
+ 
+ \multicolumn{2}{c}{} \end{tabular}
+
+
+%Section: Education
+\section{Education}
+
+\begin{tabular}{rl}	
+ \textsc{Fevereiro} de 2017 a & Mestrando em Computação, \textbf{Universidade Federal} \\
+ \textsc{Março} de 2019& \textbf{Fluminense}, Niterói, RJ, Brasil \\
+ & Coeficiente de Rendimento = 8.6 \\
+ \cr
+ \textsc{Novembro} de 2012 a & Bacharel em Ciência da Computação, \textbf{Universidade Federal} \\
+ \textsc{Julho} de 2016& \textbf{Fluminense}, Niterói, RJ, Brasil \\
+ & Coeficiente de Rendimento = 7.8 \\
+ \cr
+ Cursos:
+ &Java web application (Instituto Infnet)\\
+ &Java standard (Instituto Infnet)\\
+ &UML (Instituto Infnet)\\
+ &HTML (Instituto Infnet)\\
+ &PHP (Instituto Infnet)\\
+\end{tabular}
+
+\section{Skills and Abilities}
+\begin{tabular}{rl}
+ Idiomas:& \textsc{Português (L. Materna), Inglês (Interm),Espanhol (Básico)} \\
+ Linguagens:& \textsc{Java, Python, Java Script, PHP, HTML, CSS, SQL, UML} \\
+ 
+ Ferramentas:
+ & \textsc{RDBMS}, \textsc{NOSQL}, \textsc{Data Lake}, \textsc{Spring Boot}, \textsc{Eclipse}, \textsc{Git},  \textsc{Plant UML},  \textsc{Project}, \textsc{Jira} \\
+ 
+ \cr
+ 
+ Tarefas e Metodologias:
+ & \textsc{Elicitação de Requisitos Formais, Casos de Uso ou Histórias} \\
+ & \textsc{Técnicas de Negociação de Requisitos} \\
+ & \textsc{Modelagem de Processos de Negócios (BPM)} \\
+ & \textsc{Análise Quantitativa e Qualitativa Para Melhoria de Processos} \\
+ & \textsc{Aplicação de grupos focais e testes com usuários} \\
+ & \textsc{Alinhamento de cultura organizacional} \\
+ & \textsc{Priorização do Backlog} \\
+ & \textsc{Scrum, Git Flow, MPS.BR} \\
+ 
+ \end{tabular}
+
+\section {Awards}
+\textsc{Prêmio de desempenho acadêmico de 2016 - pela conclusão da graduação no tempo previsto e obtenção de CR dentro do TOP 3 da turma.}
+
+\section {Events}
+\textsc{Organizador voluntário no Workshop-Escola de Sistemas de Agentes, seus Ambientes e apliCações (WESAAC) em 2015 e Formal Aspects of Computing Science (FACS) em 2015.}
+
+\section {Expectations}
+Contribute to the sense of purpose, working in teams (preference for diversity rich environments), having good and transparent communication, having dynamic and diverse tasks, being challenged, deal with internal and external customers, developing new skills and improving my current ones. Work agile in projects, processes and products in way that I can generate value to everyone involved.   
+
+\end{document}
